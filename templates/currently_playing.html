@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currently Playing</title>
+</head>
+<body>
+    <p>Playing from Spotify</p>
+
+    {% if data %}
+    <p style="font-size: 200%; text-align: center;"><b>{{ data['item']['name'] }}</b></p>
+    <p style="text-align: center;">{{ data['item']['artists'][0]['name'] }}</p>
+    <img style="display: block; margin: auto;" src="{{    data['item']['album']['images'][1]['url']}}" width="{{   data['item']['album']['images'][1]['width']}}" height="{{    data['item']['album']['images'][1]['height']}}">
+</img>
+    <br>
+    {% else %}
+    <p>No currently playing song</p>
+    {% endif %}
+    <br><br><br><br><br><br>
+    &nbsp;
+    <a href="{{url_for('currently_playing.get_jsonified')}}" target="_blank">View Json of currently_playing</a>
+</body>
+</html>
