@@ -6,7 +6,7 @@ from datetime import datetime
 
 CLIENT_ID = 'f26a393e04c54022a1128fa57934bb28'
 CLIENT_SECRET = '548c06749f01495284bb312f3b735cbb'
-REDIRECT_URI = 'http://localhost:5000/callback'
+REDIRECT_URI = 'http://172.31.20.187:5000/callback'
 
 AUTH_URL = 'https://accounts.spotify.com/authorize'
 TOKEN_URL = 'https://accounts.spotify.com/api/token'
